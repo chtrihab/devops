@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: backend
-        image: rihabcht/spring_img:10 
+        image: rihabcht/spring_img:latest
         ports:
-        - containerPort: 8082
+        - containerPort: 8089
         env:
         - name: SPRING_DATASOURCE_URL
           value: "jdbc:mysql://mysql:3306/devops?createDatabaseIfNotExist=true"
@@ -35,6 +35,7 @@ spec:
     app: backend
   ports:
     - protocol: TCP
-      port: 8082
-      targetPort: 8082
-  type: ClusterIP
+      port: 8089
+      targetPort: 8089
+      nodePort:	30082	
+  type: NodePort
