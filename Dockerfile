@@ -1,4 +1,4 @@
-# Use an official OpenJDK runtime as a parent image yessss
+# Use an official OpenJDK runtime as a parent image
 FROM openjdk:17.0.1-jdk-slim
 
 # Set the working directory in the container
